@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -444,6 +445,61 @@
     transition: opacity 0.15s;
   }
   .real-img:hover { opacity: 0.88; }
+
+  /* ── Notice box ── */
+  .notice-box {
+    margin-top: 28px;
+    border: 2px solid var(--purple);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .notice-header {
+    background: var(--purple);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 12px 22px;
+    letter-spacing: 0.5px;
+  }
+  .notice-body {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .notice-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #EDE9FE;
+  }
+  .notice-item:last-child { border-bottom: none; }
+  .notice-item-main {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  .notice-item-sub {
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+    padding-left: 16px;
+  }
+  .notice-item-sub .arrow {
+    color: var(--purple);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .notice-warn {
+    margin-top: 8px;
+    font-size: 12.5px;
+    color: #c0392b;
+    font-weight: 600;
+    line-height: 1.6;
+    background: #fff5f5;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
 </style>
 </head>
 <body>
@@ -661,6 +717,37 @@
         </div>
       </div>
     </div>
+    <!-- 유의사항 -->
+    <div class="notice-box">
+      <div class="notice-header">■ 유의사항</div>
+      <div class="notice-body">
+
+        <div class="notice-item">
+          <div class="notice-item-main">팀 대표자 대상 아이디 및 임시비밀번호가 알림톡으로 발송됩니다.</div>
+          <div class="notice-item-sub"><span class="arrow">→</span>로그인 후 반드시 비밀번호를 변경해주시기 바랍니다.</div>
+        </div>
+
+        <div class="notice-item">
+          <div class="notice-item-main">중복 로그인은 불가합니다.</div>
+          <div class="notice-item-sub"><span class="arrow">→</span>팀 대표 또는 팀원 중 1명만 접속 및 참여해주시기 바랍니다.</div>
+        </div>
+
+        <div class="notice-item">
+          <div class="notice-item-main">진행 시간 : 팀당 약 20분 &nbsp;<span style="color:var(--purple);font-weight:600;">&lt;원활한 참여를 위해 10 ~ 15분 전 링크 접속&gt;</span></div>
+          <div class="notice-item-sub">(발표 10분 + 질의응답 10분)</div>
+        </div>
+
+        <div class="notice-item">
+          <div class="notice-item-main">발표자료 : 형식 자유</div>
+          <div class="notice-item-sub"><span class="arrow">→</span>발표 시 화면공유 필수 (세부 내용은 첨부파일 참고)</div>
+        </div>
+
+        <div class="notice-item">
+          <div class="notice-warn">⚠️ 발표시간 초과 또는 마이크 문제 등으로 인한 불이익에 대해서는 별도 책임지지 않으므로 사전 점검을 반드시 진행해주시기 바랍니다.</div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- Contact -->
@@ -736,6 +823,7 @@
 </script>
 </body>
 </html>
+
 
 
 
